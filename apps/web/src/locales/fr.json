@@ -1,0 +1,88 @@
+{
+  "app": {
+    "title": "EDucation SAnté Numérique - Ressources pédagogiques",
+    "subtitle": "Boris Delange - AHU informatique médicale"
+  },
+  "nav": {
+    "home": "Accueil",
+    "settings": "Paramètres",
+    "closeMenu": "Fermer le menu"
+  },
+  "home": {
+    "heading": "Ressources pédagogiques",
+    "coursesTitle": "Cours disponibles",
+    "searchPlaceholder": "Rechercher un cours ou un module",
+    "noResults": "Aucun résultat pour « {{query}} »"
+  },
+  "course": {
+    "back": "Retour",
+    "notFound": "Cours introuvable"
+  },
+  "module": {
+    "notFound": "Module introuvable",
+    "underConstruction": "En construction",
+    "underConstructionBadge": "En construction",
+    "underConstructionBanner": "Ce TD est en cours de construction : son contenu et ses fonctionnalités peuvent encore évoluer."
+  },
+  "localData": {
+    "open": "Supprimer les données locales",
+    "title": "Supprimer les données locales",
+    "description": "Efface les données enregistrées dans ce navigateur pour les TD (réponses saisies, votes, réglages). Vos préférences de thème et de langue sont conservées. Cette action est irréversible.",
+    "confirm": "Supprimer les données",
+    "cancel": "Annuler",
+    "done": "Données locales supprimées."
+  },
+  "about": {
+    "title": "À propos",
+    "open": "À propos de ce site",
+    "links": "Liens",
+    "repo": "Code source du site",
+    "repoHint": "Dépôt Git ouvert sur Framagit : contenu, code et historique des modifications.",
+    "edsan": "Parcours EDSAN",
+    "edsanHint": "Éducation en santé numérique — Université de Rennes.",
+    "license": "Licence",
+    "licenseContent": "Le contenu pédagogique de ce site est publié sous licence",
+    "licenseSource": "Le code source du site est publié sous licence",
+    "licenseThirdParty": "Vous pouvez le réutiliser et l'adapter pour vos propres enseignements, à condition de citer l'auteur et de partager vos versions dérivées sous la même licence. Certains éléments tiers (figures, extraits de recommandations) conservent leurs conditions propres."
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Si vous avez des questions concernant ce cours ou les supports pédagogiques, n'hésitez pas à nous contacter :",
+    "name": "Boris Delange",
+    "role": "AHU informatique médicale",
+    "email": "boris.delange@univ-rennes.fr"
+  },
+  "footer": {
+    "copyright": "© {{year}} Université de Rennes — {{app}}"
+  },
+  "settings": {
+    "heading": "Paramètres",
+    "description": "Gérez vos préférences d'apparence et de langue.",
+    "appearance": "Apparence",
+    "theme": "Thème",
+    "themeHint": "Choisissez un thème clair ou sombre.",
+    "themeLight": "Clair",
+    "themeDark": "Sombre",
+    "layout": "Disposition de la navigation",
+    "layoutHint": "Affichez la navigation en onglets ou en barre latérale.",
+    "layoutHeader": "Onglets en haut",
+    "layoutSidebar": "Barre latérale",
+    "language": "Langue",
+    "languageHint": "Langue utilisée dans toute l'interface."
+  },
+  "settingsMenu": {
+    "open": "Réglages"
+  },
+  "mode": {
+    "server": "Mode serveur",
+    "client": "Mode client",
+    "offline": "Hors ligne",
+    "serverHelp": "Un backend accompagne le site : il peut interroger les modèles et détient la clef API, qui ne passe jamais par votre navigateur.",
+    "clientHelp": "Le site tourne seul, sans backend. Il peut malgré tout interroger une API (Ollama, OpenRouter…) directement depuis votre navigateur, si vous la configurez dans les réglages.",
+    "offlineHelp": "Aucun appel réseau : le TD rejoue des réponses réellement produites par ces modèles et enregistrées à l’avance, avec leurs temps et leurs décomptes de tokens."
+  },
+  "toc": {
+    "title": "Sur cette page",
+    "toggle": "Afficher ou masquer le sommaire"
+  }
+}

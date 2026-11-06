@@ -1,0 +1,984 @@
+{
+ "captures": {
+  "warmup|llama-70b|naive": {
+   "prompt": "Antibio pour une pyélonéphrite ?",
+   "text": "Ciprofloxacine 500 mg x 2/jour pendant 7 à 14 jours, ou Céftriaxone 1g/jour pendant 7 à 14 jours, ou Amoxicilline-Clavulanate 500/125 mg x 3/jour pendant 7 à 14 jours.",
+   "usage": {
+    "prompt": 77,
+    "completion": 70,
+    "total": 147
+   },
+   "waitMs": 625,
+   "genMs": 1039,
+   "medianGapMs": 32
+  },
+  "warmup|llama-70b|contextual": {
+   "prompt": "Femme de 68 ans, 62 kg, pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Quelle antibiothérapie probabiliste ? Précise la molécule, la posologie et la durée.",
+   "text": "Ceftriaxone 1g/jour pendant 7 à 10 jours, ajustée en fonction de la fonction rénale : 1g/48h.",
+   "usage": {
+    "prompt": 131,
+    "completion": 38,
+    "total": 169
+   },
+   "waitMs": 2510,
+   "genMs": 2378,
+   "medianGapMs": 22
+  },
+  "prompt|llama-70b|raw": {
+   "prompt": "Antibio pour une pyélonéphrite ?",
+   "text": "Ciprofloxacine ou Céftriaxone, 500-750 mg par jour pendant 7-14 jours.",
+   "usage": {
+    "prompt": 96,
+    "completion": 28,
+    "total": 124
+   },
+   "waitMs": 4632,
+   "genMs": 437,
+   "medianGapMs": 0
+  },
+  "prompt|llama-70b|context": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois. Quelle antibiothérapie probabiliste ? Précise la molécule, la posologie et la durée.",
+   "text": "Ceftriaxone 2g IV en une prise unique ou Ciprofloxacine 500mg per os en 2 prises pendant 7 jours.",
+   "usage": {
+    "prompt": 153,
+    "completion": 36,
+    "total": 189
+   },
+   "waitMs": 738,
+   "genMs": 497,
+   "medianGapMs": 19
+  },
+  "chance|llama-70b|hot-0": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "Ceftriaxone 2g IV en une prise unique, ou Amoxicilline-Clavulanate 1g/125mg per os deux fois par jour, ou Ciprofloxacine 500mg per os deux fois par jour. Durée : 7 à 10 jours.",
+   "usage": {
+    "prompt": 147,
+    "completion": 65,
+    "total": 212
+   },
+   "waitMs": 759,
+   "genMs": 1168,
+   "medianGapMs": 19
+  },
+  "chance|llama-70b|hot-1": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "Ciprofloxacine, 500 mg x 2/jour, 7 à 10 jours.",
+   "usage": {
+    "prompt": 147,
+    "completion": 23,
+    "total": 170
+   },
+   "waitMs": 4471,
+   "genMs": 260,
+   "medianGapMs": 28
+  },
+  "chance|llama-70b|hot-2": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "Ceftriaxone, 2g/jour, 7 à 10 jours.",
+   "usage": {
+    "prompt": 146,
+    "completion": 21,
+    "total": 167
+   },
+   "waitMs": 727,
+   "genMs": 482,
+   "medianGapMs": 25
+  },
+  "chance|llama-70b|hot-3": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "Ceftriaxone : 2g/jour, 7 jours.",
+   "usage": {
+    "prompt": 146,
+    "completion": 18,
+    "total": 164
+   },
+   "waitMs": 346,
+   "genMs": 2967,
+   "medianGapMs": 21
+  },
+  "chance|llama-70b|hot-4": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "Ceftriaxone 2g/jour IV ou Amoxicilline-Clavulanate 1g/125mg x 3 par jour per os, durée 7 à 10 jours.",
+   "usage": {
+    "prompt": 166,
+    "completion": 46,
+    "total": 212
+   },
+   "waitMs": 1131,
+   "genMs": 738,
+   "medianGapMs": 21
+  },
+  "chance|llama-70b|cold-0": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "Ceftriaxone 1g IV en une prise unique, ou Amoxicilline-Clavulanate 500/125 mg per os 3 fois par jour, durée 7 à 10 jours.",
+   "usage": {
+    "prompt": 166,
+    "completion": 48,
+    "total": 214
+   },
+   "waitMs": 212,
+   "genMs": 154,
+   "medianGapMs": 1
+  },
+  "chance|llama-70b|cold-1": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "Ceftriaxone 2g IV en une prise, puis 1g/jour, ou Amoxicilline-Clavulanate 1g/125mg per os 2 fois par jour, ou Ciprofloxacine 500mg per os 2 fois par jour. Durée : 7 à 10 jours.",
+   "usage": {
+    "prompt": 147,
+    "completion": 73,
+    "total": 220
+   },
+   "waitMs": 442,
+   "genMs": 908,
+   "medianGapMs": 10
+  },
+  "warmup|gemma-4b|naive": {
+   "prompt": "Antibio pour une pyélonéphrite ?",
+   "text": "Céfuroxime 500mg, 1g toutes les 12 heures.\n\nDurée : 7 à 10 jours, selon l’évolution clinique et les résultats de la culture. \n\nSurveillance : Fièvre, douleur, fièvre, urines troubles.\n\nPrécision : Ce traitement est une indication générale. L'adaptation est nécessaire en fonction de la sensibilité bactériologique et de l'état du patient.\n",
+   "usage": {
+    "prompt": 63,
+    "completion": 95,
+    "total": 158
+   },
+   "waitMs": 1146,
+   "genMs": 4025,
+   "medianGapMs": 31
+  },
+  "warmup|gemma-4b|contextual": {
+   "prompt": "Femme de 68 ans, 62 kg, pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Quelle antibiothérapie probabiliste ? Précise la molécule, la posologie et la durée.",
+   "text": "Cifloxorin 400 mg.\n\nPosologie : 2 fois par jour.\n\nDurée : 7 jours.\n\nCifloxorin est un fluoroquinolone de choix en première intention, efficace contre les bactéries courantes impliquées dans les pyélonéphrites. La posologie est adaptée à la fonction rénale réduite (DFG 38 mL/min). La durée de traitement est de 7 jours pour une infection aiguë. Surveillance des effets indésirables, notamment troubles gastro-intestinaux.",
+   "usage": {
+    "prompt": 111,
+    "completion": 112,
+    "total": 223
+   },
+   "waitMs": 817,
+   "genMs": 4162,
+   "medianGapMs": 31
+  },
+  "chance|gemma-4b|hot-0": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "Ciprofloxacine, 500 mg, 2 fois par jour.\n\nDurée : 7 à 10 jours.\n\nSurveillance de la DFG et des signes cliniques. En cas d'absence d'amélioration après 48-72h, envisager un changement d'antibiotique.\n",
+   "usage": {
+    "prompt": 126,
+    "completion": 72,
+    "total": 198
+   },
+   "waitMs": 613,
+   "genMs": 2169,
+   "medianGapMs": 29
+  },
+  "chance|gemma-4b|hot-1": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "Ciprofloxacine, 500 mg, 2 fois par jour.\n\nDurée : 7 à 10 jours.\n\nAdaptation possible en fonction de l'évolution clinique et des cultures bactériennes. \n\nSurveillance de la fonction rénale.\n",
+   "usage": {
+    "prompt": 126,
+    "completion": 59,
+    "total": 185
+   },
+   "waitMs": 587,
+   "genMs": 1859,
+   "medianGapMs": 26
+  },
+  "chance|gemma-4b|hot-2": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "Céfuroxime 750mg, 1g par jour, par voie orale.\n\nDurée : 7 à 10 jours.\n\nEn cas d'absence d'amélioration après 48h, envisager une association avec un β-lactamase stable (amoxicilline 1g, 2 fois par jour).\n\nSurveiller l'efficacité clinique et la tolérance. Ajustement possible selon résultats microbiologiques.",
+   "usage": {
+    "prompt": 126,
+    "completion": 97,
+    "total": 223
+   },
+   "waitMs": 701,
+   "genMs": 2935,
+   "medianGapMs": 29
+  },
+  "chance|gemma-4b|hot-3": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "Ciprofloxacine, 500 mg, 2 fois par jour.\n\nDurée : 7 à 10 jours.\n\nEn tenant compte de la DFG, le schéma est optimisé pour une absorption correcte. Surveillance de la réponse clinique.\n",
+   "usage": {
+    "prompt": 126,
+    "completion": 58,
+    "total": 184
+   },
+   "waitMs": 787,
+   "genMs": 1823,
+   "medianGapMs": 30
+  },
+  "chance|gemma-4b|hot-4": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "Ciprofloxacine, 500 mg, 2 fois par jour.\n\nDurée : 7 à 10 jours.\n\nEn fonction de l'évolution clinique et des cultures, ajuster si nécessaire.\n\nSurveillance de la fonction rénale.\n",
+   "usage": {
+    "prompt": 126,
+    "completion": 58,
+    "total": 184
+   },
+   "waitMs": 591,
+   "genMs": 2836,
+   "medianGapMs": 32
+  },
+  "chance|gemma-4b|cold-0": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "Céfuroxime 750 mg, par voie orale, toutes les 12 heures.\n\nDurée : 7 à 10 jours.\n\nEn cas d'absence d'amélioration après 48 heures, envisager une association avec un inhibiteur de la beta-lactamase (amoxicilline 1g, orale, toutes les 8 heures).\n\nSurveiller la réponse clinique et la fonction rénale.\n",
+   "usage": {
+    "prompt": 126,
+    "completion": 96,
+    "total": 222
+   },
+   "waitMs": 667,
+   "genMs": 3214,
+   "medianGapMs": 25
+  },
+  "chance|gemma-4b|cold-1": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "Céfuroxime 750 mg, par voie orale, toutes les 12 heures.\n\nDurée : 7 à 10 jours.\n\nEn cas d'absence d'amélioration après 48 heures, envisager une association avec un inhibiteur de la beta-lactamase (amoxicilline 1g, orale, toutes les 8 heures).\n\nSurveiller la réponse clinique et la fonction rénale.\n",
+   "usage": {
+    "prompt": 126,
+    "completion": 96,
+    "total": 222
+   },
+   "waitMs": 581,
+   "genMs": 2412,
+   "medianGapMs": 7
+  },
+  "prompt|gemma-4b|raw": {
+   "prompt": "Antibio pour une pyélonéphrite ?",
+   "text": "**Molécule:** Ciprofloxacine\n\n**Posologie:** 500mg, 2 fois par jour\n\n**Durée:** 7-10 jours\n\nAdaptée aux pyélonéphrites aiguës sensibles. Ajuster selon la sensibilité bactériologique. Surveillance des signes cliniques et biologiques. En cas de persistance des symptômes, envisager un traitement plus long ou un autre antibiotique.\n",
+   "usage": {
+    "prompt": 63,
+    "completion": 88,
+    "total": 151
+   },
+   "waitMs": 1334,
+   "genMs": 3148,
+   "medianGapMs": 32
+  },
+  "prompt|gemma-4b|context": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois. Quelle antibiothérapie probabiliste ? Précise la molécule, la posologie et la durée.",
+   "text": "Ciprofloxacine.\n\nPosologie : 500 mg.\n\nDurée : 7 à 10 jours.\n\nJustification : Ciprofloxacine, spectre large contre les bactéries Gram négatives, adaptée à la DFG de 38 mL/min.  Cette durée assure une couverture bactérienne suffisante tout en minimisant les effets secondaires. Surveillance clinique obligatoire.",
+   "usage": {
+    "prompt": 129,
+    "completion": 82,
+    "total": 211
+   },
+   "waitMs": 922,
+   "genMs": 3392,
+   "medianGapMs": 33
+  },
+  "warmup|gpt-6-luna|naive": {
+   "prompt": "Antibio pour une pyélonéphrite ?",
+   "text": "**Adulte non enceinte, forme simple et stable :** ciprofloxacine **500 mg per os toutes les 12 h pendant 7 jours**, après ECBU, si faible risque de résistance et pas de fluoroquinolone récente ; adapter à l’antibiogramme.\n\n**Forme grave/hospitalière :** ceftriaxone **1–2 g IV toutes les 24 h**, puis relais selon l’antibiogramme ; durée totale généralement **7–10 jours**.",
+   "usage": {
+    "prompt": 64,
+    "completion": 705,
+    "total": 769
+   },
+   "waitMs": 8116,
+   "genMs": 775,
+   "medianGapMs": 0
+  },
+  "warmup|gpt-6-luna|contextual": {
+   "prompt": "Femme de 68 ans, 62 kg, pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Quelle antibiothérapie probabiliste ? Précise la molécule, la posologie et la durée.",
+   "text": "**Ciprofloxacine 500 mg par voie orale toutes les 12 heures pendant 7 jours**, si absence de fluoroquinolone dans les 6 derniers mois et de contre-indication. DFG à 38 mL/min : pas d’adaptation habituelle à cette dose. ECBU avant la première dose, puis ajustement à l’antibiogramme.",
+   "usage": {
+    "prompt": 111,
+    "completion": 911,
+    "total": 1022
+   },
+   "waitMs": 9274,
+   "genMs": 525,
+   "medianGapMs": 0
+  },
+  "prompt|gpt-6-luna|raw": {
+   "prompt": "Antibio pour une pyélonéphrite ?",
+   "text": "**Pyélonéphrite aiguë simple, adulte non enceinte, stable :** ciprofloxacine **500 mg PO toutes les 12 h pendant 7 jours**, si la résistance locale le permet et sans prise récente de fluoroquinolone. Faire un **ECBU avant traitement**, puis adapter à l’antibiogramme.\n\n**Forme sévère ou sepsis :** ceftriaxone **2 g IV toutes les 24 h** en probabiliste, puis relais selon l’antibiogramme ; durée totale généralement **7–10 jours**.",
+   "usage": {
+    "prompt": 64,
+    "completion": 538,
+    "total": 602
+   },
+   "waitMs": 5408,
+   "genMs": 785,
+   "medianGapMs": 0
+  },
+  "prompt|gpt-6-luna|context": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois. Quelle antibiothérapie probabiliste ? Précise la molécule, la posologie et la durée.",
+   "text": "**Ciprofloxacine 500 mg par voie orale toutes les 12 h pendant 7 jours**, sous réserve d’absence de contre-indication individuelle. Adapter secondairement à l’antibiogramme.",
+   "usage": {
+    "prompt": 130,
+    "completion": 565,
+    "total": 695
+   },
+   "waitMs": 7115,
+   "genMs": 126,
+   "medianGapMs": 0
+  },
+  "chance|gpt-6-luna|hot-0": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "**Ciprofloxacine 500 mg par voie orale, 2 fois par jour pendant 7 jours** (DFG 38 mL/min : pas d’adaptation posologique nécessaire).",
+   "usage": {
+    "prompt": 124,
+    "completion": 426,
+    "total": 550
+   },
+   "waitMs": 5318,
+   "genMs": 111,
+   "medianGapMs": 0
+  },
+  "chance|gpt-6-luna|hot-1": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "**Ciprofloxacine 500 mg par voie orale toutes les 12 heures pendant 7 jours** (DFG 38 mL/min : pas d’ajustement habituellement nécessaire).",
+   "usage": {
+    "prompt": 124,
+    "completion": 563,
+    "total": 687
+   },
+   "waitMs": 6865,
+   "genMs": 340,
+   "medianGapMs": 0
+  },
+  "chance|gpt-6-luna|hot-2": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "**Ciprofloxacine 500 mg par voie orale toutes les 12 heures pendant 7 jours.**",
+   "usage": {
+    "prompt": 124,
+    "completion": 546,
+    "total": 670
+   },
+   "waitMs": 7736,
+   "genMs": 75,
+   "medianGapMs": 0
+  },
+  "chance|gpt-6-luna|hot-3": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "**Ciprofloxacine** : 500 mg par voie orale toutes les 12 heures pendant **7 jours**. À un DFG de 38 mL/min, pas d’ajustement usuel de cette posologie.",
+   "usage": {
+    "prompt": 124,
+    "completion": 439,
+    "total": 563
+   },
+   "waitMs": 6501,
+   "genMs": 309,
+   "medianGapMs": 0
+  },
+  "chance|gpt-6-luna|hot-4": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "**Ciprofloxacine 500 mg par voie orale, 2 fois par jour pendant 7 jours.**  \nPrélever un ECBU avant la première dose.",
+   "usage": {
+    "prompt": 124,
+    "completion": 405,
+    "total": 529
+   },
+   "waitMs": 5544,
+   "genMs": 229,
+   "medianGapMs": 0
+  },
+  "chance|gpt-6-luna|cold-0": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "**Ciprofloxacine 500 mg par voie orale, 2 fois par jour pendant 7 jours** (DFG 38 mL/min : posologie compatible). Prélèvement d’ECBU avant la première dose.",
+   "usage": {
+    "prompt": 124,
+    "completion": 486,
+    "total": 610
+   },
+   "waitMs": 6013,
+   "genMs": 309,
+   "medianGapMs": 0
+  },
+  "chance|gpt-6-luna|cold-1": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Molécule, posologie, durée.",
+   "text": "**Ciprofloxacine 500 mg par voie orale toutes les 12 heures pendant 7 jours.** Pas d’adaptation posologique nécessaire pour un DFG à 38 mL/min.",
+   "usage": {
+    "prompt": 124,
+    "completion": 475,
+    "total": 599
+   },
+   "waitMs": 5603,
+   "genMs": 282,
+   "medianGapMs": 0
+  },
+  "warmup|gemma-4b|sourced": {
+   "prompt": "Femme de 68 ans, 62 kg, pyélonéphrite aiguë communautaire sans signe de gravité, DFG estimé à 38 mL/min. Quelle antibiothérapie probabiliste ? Molécule, posologie adaptée à la fonction rénale, durée. Cite pour chaque point la recommandation française sur laquelle tu t'appuies, avec l'année. Si tu n'es pas sûr, dis-le explicitement plutôt que d'inventer.",
+   "text": "Céfotaxime.\n\nPosologie : 1,5 g toutes les 12 heures.\n\nDurée : 7 à 10 jours.\n\nRecommandation : HAS - Guide d'utilisation des antibiotiques - 2021.  Pour les pyélonéphrites aiguës, l'utilisation de céphalosporines de 3ème génération est privilégiée en raison de leur spectre d'action et de leur bonne tolérance. Ajustement de la posologie en fonction de la clairance de la créatinine (DFG).  En cas de DFG < 30 mL/min, envisager une administration intraveineuse.",
+   "usage": {
+    "prompt": 155,
+    "completion": 141,
+    "total": 296
+   },
+   "waitMs": 1220,
+   "genMs": 2174,
+   "medianGapMs": 0
+  },
+  "warmup|llama-70b|sourced": {
+   "prompt": "Femme de 68 ans, 62 kg, pyélonéphrite aiguë communautaire sans signe de gravité, DFG estimé à 38 mL/min. Quelle antibiothérapie probabiliste ? Molécule, posologie adaptée à la fonction rénale, durée. Cite pour chaque point la recommandation française sur laquelle tu t'appuies, avec l'année. Si tu n'es pas sûr, dis-le explicitement plutôt que d'inventer.",
+   "text": "Ciprofloxacine, 500 mg x 2/j, 7-10 jours (SPILF 2020). La posologie n'a pas besoin d'être adaptée pour une DFG à 38 mL/min (HAS 2019). Je ne suis pas sûr pour la durée exacte, cela peut varier en fonction de la réponse clinique et des résultats des examens complémentaires.",
+   "usage": {
+    "prompt": 175,
+    "completion": 87,
+    "total": 262
+   },
+   "waitMs": 853,
+   "genMs": 1569,
+   "medianGapMs": 0
+  },
+  "warmup|gpt-6-luna|sourced": {
+   "prompt": "Femme de 68 ans, 62 kg, pyélonéphrite aiguë communautaire sans signe de gravité, DFG estimé à 38 mL/min. Quelle antibiothérapie probabiliste ? Molécule, posologie adaptée à la fonction rénale, durée. Cite pour chaque point la recommandation française sur laquelle tu t'appuies, avec l'année. Si tu n'es pas sûr, dis-le explicitement plutôt que d'inventer.",
+   "text": "**Ciprofloxacine 500 mg per os toutes les 12 h pendant 7 jours**, si absence de prise de fluoroquinolone dans les 6 derniers mois et de contre-indication. **SPILF 2018** : fluoroquinolone en probabiliste et durée de 7 jours pour une pyélonéphrite non grave.\n\nÀ DFG estimé à 38 mL/min, pas de réduction attendue si la clairance de Cockcroft–Gault est ≥30 mL/min : **500 mg toutes les 12 h** (RCP français de ciprofloxacine, §4.2 ; année de version non précisée). L’ECBU est à réaliser avant la première dose (**SPILF 2018**).",
+   "usage": {
+    "prompt": 148,
+    "completion": 1832,
+    "total": 1980
+   },
+   "waitMs": 16542,
+   "genMs": 704,
+   "medianGapMs": 0
+  },
+  "prompt|gemma-4b|role-source": {
+   "prompt": "Tu es un médecin infectiologue, à jour des recommandations françaises (HAS).\n\nFemme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Donne la molécule, la posologie adaptée à la fonction rénale, et la durée.\n\nPour chaque point, cite la recommandation sur laquelle tu t’appuies, avec son année.",
+   "text": "**Molécule :** Ciprofloxacine.\n\n**Posologie :** 500 mg, 2 fois par jour.\n\n**Durée :** 7 jours.\n\n**Justification :** Recommandation HAS - Antimicrobines - Infections urinaires basses - Guide 2021,  et Recommandation HAS - Infections urinaires hautes - Guide 2019, en tenant compte de la DFG (38 mL/min) pour ajuster la posologie. La ciprofloxacine est bien tolérée et efficace contre la plupart des bactéries urinaires.  La durée de 7 jours est conforme aux recommandations pour les pyélonéphrites aiguës non compliquées.\n",
+   "usage": {
+    "prompt": 174,
+    "completion": 154,
+    "total": 328
+   },
+   "waitMs": 513,
+   "genMs": 2830,
+   "medianGapMs": 0
+  },
+  "prompt|gemma-4b|humility": {
+   "prompt": "Tu es un médecin infectiologue, à jour des recommandations françaises (HAS).\n\nFemme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Raisonne étape par étape : d’abord la molécule, puis l’adaptation à la fonction rénale, puis la durée.\n\nPour chaque point, cite la recommandation sur laquelle tu t’appuies, avec son année.\n\nSi tu n’es pas sûr d’un point, dis-le explicitement au lieu de deviner. Signale aussi toute information manquante qui changerait ta réponse.",
+   "text": "Céfotaxime.\n\nEn raison de la DFG (38 mL/min), on privilégie une céphalosporine de 3ème génération, Céfotaxime (HAS, 2022).\n\nAdaptation fonctionnelle : Dose ajustée (0.75g toutes les 12h).\n\nDurée : 7 à 10 jours, en fonction de l’amélioration clinique (HAS, 2022).\n\nInformation manquante : NFS, antibiogramme (si suspicion de résistance).\n",
+   "usage": {
+    "prompt": 219,
+    "completion": 118,
+    "total": 337
+   },
+   "waitMs": 529,
+   "genMs": 2225,
+   "medianGapMs": 0
+  },
+  "prompt|llama-70b|role-source": {
+   "prompt": "Tu es un médecin infectiologue, à jour des recommandations françaises (HAS).\n\nFemme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Donne la molécule, la posologie adaptée à la fonction rénale, et la durée.\n\nPour chaque point, cite la recommandation sur laquelle tu t’appuies, avec son année.",
+   "text": "Ceftriaxone 1g/j IV (HAS 2020), posologie non nécessitant d'adaptation pour une DFG à 38 mL/min (Vidal 2022), durée de 7 à 10 jours (SPILF 2019).",
+   "usage": {
+    "prompt": 201,
+    "completion": 60,
+    "total": 261
+   },
+   "waitMs": 831,
+   "genMs": 965,
+   "medianGapMs": 0
+  },
+  "prompt|llama-70b|humility": {
+   "prompt": "Tu es un médecin infectiologue, à jour des recommandations françaises (HAS).\n\nFemme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Raisonne étape par étape : d’abord la molécule, puis l’adaptation à la fonction rénale, puis la durée.\n\nPour chaque point, cite la recommandation sur laquelle tu t’appuies, avec son année.\n\nSi tu n’es pas sûr d’un point, dis-le explicitement au lieu de deviner. Signale aussi toute information manquante qui changerait ta réponse.",
+   "text": "Molécule : amoxicilline-acide clavulanique (HAS, 2020)\nAdaptation à la fonction rénale : dose réduite en raison de la DFG à 38 mL/min, mais je ne suis pas sûr de la posologie exacte (HAS, 2020)\nDurée : 7 à 10 jours (SPILF, 2020)\n\nInformations manquantes : pas d'informations sur la localisation géographique, les facteurs de risque de résistance aux antibiotiques.",
+   "usage": {
+    "prompt": 247,
+    "completion": 118,
+    "total": 365
+   },
+   "waitMs": 2938,
+   "genMs": 2007,
+   "medianGapMs": 0
+  },
+  "prompt|gpt-6-luna|role-source": {
+   "prompt": "Tu es un médecin infectiologue, à jour des recommandations françaises (HAS).\n\nFemme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Donne la molécule, la posologie adaptée à la fonction rénale, et la durée.\n\nPour chaque point, cite la recommandation sur laquelle tu t’appuies, avec son année.",
+   "text": "- **Molécule :** ciprofloxacine per os, probabiliste de première intention en l’absence de fluoroquinolone dans les 6 derniers mois (**SPILF 2018 ; HAS 2021**).\n- **Posologie :** 500 mg toutes les 12 h. À DFG 38 mL/min, pas de réduction usuelle si la clairance est ≥30 mL/min (**RCP ANSM de la ciprofloxacine, adaptation rénale**).\n- **Durée :** 7 jours (**SPILF 2018 ; HAS 2021**).\n\nÀ 68 ans, sans fragilité précisée, et avec un DFG supérieur à 30, elle ne relève pas à elle seule d’une pyélonéphrite à risque de complication (**SPILF 2018**).",
+   "usage": {
+    "prompt": 172,
+    "completion": 1734,
+    "total": 1906
+   },
+   "waitMs": 15210,
+   "genMs": 1155,
+   "medianGapMs": 0
+  },
+  "prompt|gpt-6-luna|humility": {
+   "prompt": "Tu es un médecin infectiologue, à jour des recommandations françaises (HAS).\n\nFemme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Pas d’allergie, pas de fluoroquinolone dans les 6 derniers mois.\n\nQuelle antibiothérapie probabiliste ? Raisonne étape par étape : d’abord la molécule, puis l’adaptation à la fonction rénale, puis la durée.\n\nPour chaque point, cite la recommandation sur laquelle tu t’appuies, avec son année.\n\nSi tu n’es pas sûr d’un point, dis-le explicitement au lieu de deviner. Signale aussi toute information manquante qui changerait ta réponse.",
+   "text": "1. **Molécule :** ciprofloxacine **500 mg par voie orale, 2 fois/jour**, après ECBU. Choix conforme aux recommandations SPILF 2018 si absence de fluoroquinolone dans les 6 derniers mois.\n\n2. **Fonction rénale :** pas de réduction si la clairance Cockcroft–Gault est ≥30 mL/min (RCP ANSM). Le DFG estimé à 38 ne permet pas de la calculer exactement : il faut la créatininémie ; si la clairance est <30, adapter.\n\n3. **Durée :** **7 jours** (SPILF 2018).\n\nCette proposition suppose l’absence de fragilité importante, d’anomalie urologique ou d’antécédent de germe résistant ; ces éléments pourraient modifier le choix.",
+   "usage": {
+    "prompt": 212,
+    "completion": 1956,
+    "total": 2168
+   },
+   "waitMs": 17301,
+   "genMs": 1220,
+   "medianGapMs": 0
+  },
+  "memory|llama-70b|none|case": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Quelle antibiothérapie ?",
+   "text": "Ciprofloxacine 500 mg x 2/jour pendant 7 à 10 jours, en fonction de la sensibilité du germe.",
+   "usage": {
+    "prompt": 114,
+    "completion": 33,
+    "total": 147
+   },
+   "waitMs": 1130,
+   "genMs": 330,
+   "medianGapMs": 0
+  },
+  "memory|llama-70b|none|allergy": {
+   "prompt": "Et si elle était allergique aux bêta-lactamines ?",
+   "text": "Alternatives : macrolides (érythromycine, clarithromycine) ou quinolones (ciprofloxacine, lévofloxacine). Posologie et durée selon le produit et l'infection.",
+   "usage": {
+    "prompt": 98,
+    "completion": 52,
+    "total": 150
+   },
+   "waitMs": 872,
+   "genMs": 659,
+   "medianGapMs": 0
+  },
+  "memory|llama-70b|none|duration": {
+   "prompt": "Quelle durée finalement ?",
+   "text": "Je ne peux pas fournir de conseils médicaux. Puis-je vous aider avec autre chose?",
+   "usage": {
+    "prompt": 71,
+    "completion": 23,
+    "total": 94
+   },
+   "waitMs": 601,
+   "genMs": 2143,
+   "medianGapMs": 66
+  },
+  "memory|llama-70b|none|renal": {
+   "prompt": "Faut-il adapter la dose à sa fonction rénale ?",
+   "text": "Oui, adaptation de la dose en fonction de la clairance rénale pour les médicaments éliminés principalement par les reins. Réduction de la dose ou augmentation de l'intervalle entre les prises en cas d'insuffisance rénale.",
+   "usage": {
+    "prompt": 78,
+    "completion": 61,
+    "total": 139
+   },
+   "waitMs": 1033,
+   "genMs": 1501,
+   "medianGapMs": 0
+  },
+  "memory|llama-70b|none|recap": {
+   "prompt": "Résume-moi ce qu’on a décidé.",
+   "text": "Je suis désolé, mais il semble que nous n'ayons pas eu de conversation précédente pour résumer quelque chose. Cette conversation vient de commencer. Si vous souhaitez discuter d'un sujet spécifique, je suis prêt à vous aider !",
+   "usage": {
+    "prompt": 77,
+    "completion": 56,
+    "total": 133
+   },
+   "waitMs": 897,
+   "genMs": 908,
+   "medianGapMs": 0
+  },
+  "memory|llama-70b|full|case": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Quelle antibiothérapie ?",
+   "text": "Ciprofloxacine 500 mg x 2/jour pendant 7 à 10 jours ou Céftriaxone 2g en IV unique.",
+   "usage": {
+    "prompt": 113,
+    "completion": 34,
+    "total": 147
+   },
+   "waitMs": 753,
+   "genMs": 180,
+   "medianGapMs": 0
+  },
+  "memory|llama-70b|full|allergy": {
+   "prompt": "Et si elle était allergique aux bêta-lactamines ?",
+   "text": "Ciprofloxacine 500 mg x 2/jour pendant 7 à 10 jours ou Cotrimoxazole 960 mg x 2/jour pendant 7 à 10 jours.",
+   "usage": {
+    "prompt": 171,
+    "completion": 42,
+    "total": 213
+   },
+   "waitMs": 800,
+   "genMs": 1732,
+   "medianGapMs": 0
+  },
+  "memory|llama-70b|full|duration": {
+   "prompt": "Quelle durée finalement ?",
+   "text": "7 jours.",
+   "usage": {
+    "prompt": 229,
+    "completion": 4,
+    "total": 233
+   },
+   "waitMs": 602,
+   "genMs": 58,
+   "medianGapMs": 49
+  },
+  "memory|llama-70b|full|renal": {
+   "prompt": "Faut-il adapter la dose à sa fonction rénale ?",
+   "text": "Oui, pour la ciprofloxacine : 250 mg x 2/jour. Pour le cotrimoxazole, réduction de 50% de la dose.",
+   "usage": {
+    "prompt": 255,
+    "completion": 38,
+    "total": 293
+   },
+   "waitMs": 1118,
+   "genMs": 1117,
+   "medianGapMs": 0
+  },
+  "memory|llama-70b|full|recap": {
+   "prompt": "Résume-moi ce qu’on a décidé.",
+   "text": "Ciprofloxacine 250 mg x 2/jour pendant 7 jours ou Cotrimoxazole (960 mg x 2/jour / 2) pendant 7 jours.",
+   "usage": {
+    "prompt": 314,
+    "completion": 40,
+    "total": 354
+   },
+   "waitMs": 567,
+   "genMs": 1897,
+   "medianGapMs": 1
+  },
+  "memory|llama-70b|summary|case": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Quelle antibiothérapie ?",
+   "text": "Ciprofloxacine 500 mg x 2/jour pendant 7 à 10 jours ou Céftriaxone 2g en IV unique.",
+   "usage": {
+    "prompt": 113,
+    "completion": 35,
+    "total": 148
+   },
+   "waitMs": 1627,
+   "genMs": 914,
+   "medianGapMs": 0
+  },
+  "memory|llama-70b|summary|allergy": {
+   "prompt": "Et si elle était allergique aux bêta-lactamines ?",
+   "text": "Ciprofloxacine 500 mg x 2/jour pendant 7 à 10 jours ou Azithromycine 500 mg/jour pendant 5 jours.",
+   "usage": {
+    "prompt": 172,
+    "completion": 37,
+    "total": 209
+   },
+   "waitMs": 753,
+   "genMs": 549,
+   "medianGapMs": 0
+  },
+  "memory|llama-70b|summary|duration": {
+   "prompt": "Quelle durée finalement ?",
+   "text": "7 jours.",
+   "usage": {
+    "prompt": 225,
+    "completion": 4,
+    "total": 229
+   },
+   "waitMs": 926,
+   "genMs": 0,
+   "medianGapMs": 20
+  },
+  "memory|llama-70b|summary|renal": {
+   "prompt": "Faut-il adapter la dose à sa fonction rénale ?",
+   "text": "Oui, pour la ciprofloxacine : 250 mg x 2/jour.",
+   "usage": {
+    "prompt": 250,
+    "completion": 21,
+    "total": 271
+   },
+   "waitMs": 1128,
+   "genMs": 475,
+   "medianGapMs": 0
+  },
+  "memory|llama-70b|summary|recap|digest": {
+   "prompt": "Question : Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Quelle antibiothérapie ?\nRéponse : Ciprofloxacine 500 mg x 2/jour pendant 7 à 10 jours ou Céftriaxone 2g en IV unique.\n\n---\n\nRésume la conversation ci-dessus en 80 mots maximum, pour qu'un autre modèle puisse continuer à répondre sans avoir lu les échanges.\n\nConserve impérativement les données cliniques chiffrées (âge, poids, fonction rénale, allergies) et les décisions déjà prises. Écris au style télégraphique.",
+   "covers": 1,
+   "added": 1,
+   "text": "Femme 68 ans, 62 kg, pyélonéphrite aiguë communautaire. DFG 38 mL/min. Traité par ciprofloxacine 500 mg x 2/jour ou céftriaxone 2g en IV unique.",
+   "usage": {
+    "prompt": 175,
+    "completion": 61,
+    "total": 236
+   },
+   "waitMs": 756,
+   "genMs": 1037,
+   "medianGapMs": 0
+  },
+  "memory|llama-70b|summary|recap": {
+   "prompt": "Résume-moi ce qu’on a décidé.",
+   "text": "Ciprofloxacine 250 mg x 2/jour pendant 7 jours.",
+   "usage": {
+    "prompt": 277,
+    "completion": 19,
+    "total": 296
+   },
+   "waitMs": 413,
+   "genMs": 918,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|none|treatment": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Quelle antibiothérapie probabiliste ? Molécule, posologie, durée. Cite tes sources précisément : le document, la page et le passage mot pour mot.",
+   "sources": null,
+   "semantic": false,
+   "text": "Ciprofloxacine 500 mg x 2/jour pendant 7 à 10 jours. \nSource : \"Prise en charge des infections urinaires bactériennes communautaires de l'adulte\" de la SPILF (Société de Pathologie Infectieuse de Langue Française), page 12, tableau 3.",
+   "usage": {
+    "prompt": 146,
+    "completion": 77,
+    "total": 223
+   },
+   "waitMs": 1487,
+   "genMs": 1292,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|none|severity": {
+   "prompt": "Quels sont les critères de gravité d’une pyélonéphrite aiguë ?",
+   "sources": null,
+   "semantic": false,
+   "text": "Les critères de gravité d'une pyélonéphrite aiguë incluent :\n\n- Température élevée supérieure à 38,5°C\n- Douleur costovértebrale intense\n- Leucocytose avec plus de 15 000 éléments par mm3\n- Présence de signes de septicémie (tachycardie, hypotension, etc.)\n- Altération de la fonction rénale (augmentation de la créatininémie)",
+   "usage": {
+    "prompt": 85,
+    "completion": 112,
+    "total": 197
+   },
+   "waitMs": 4103,
+   "genMs": 6584,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|none|duration": {
+   "prompt": "Quelle est la durée de traitement recommandée pour une pyélonéphrite aiguë simple ?",
+   "sources": null,
+   "semantic": false,
+   "text": "La durée de traitement recommandée pour une pyélonéphrite aiguë simple est généralement de 7 à 14 jours, avec des antibiotiques tels que la ciprofloxacine (500 mg, 2 fois par jour) ou la ceftriaxone (1 à 2 g, 1 fois par jour).",
+   "usage": {
+    "prompt": 87,
+    "completion": 76,
+    "total": 163
+   },
+   "waitMs": 517,
+   "genMs": 4504,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|none|pregnancy": {
+   "prompt": "Quelle antibiothérapie pour une pyélonéphrite aiguë chez la femme enceinte ?",
+   "sources": null,
+   "semantic": false,
+   "text": "Céftriaxone (2g/jour) ou ciprofloxacine (500mg/12h) pendant 10 à 14 jours.",
+   "usage": {
+    "prompt": 90,
+    "completion": 34,
+    "total": 124
+   },
+   "waitMs": 773,
+   "genMs": 1287,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|none|imaging": {
+   "prompt": "Faut-il faire une imagerie devant une pyélonéphrite aiguë simple ?",
+   "sources": null,
+   "semantic": false,
+   "text": "Non, sauf en cas de complications ou de doutes diagnostiques. L'échographie est le premier examen à réaliser en cas de doute.",
+   "usage": {
+    "prompt": 85,
+    "completion": 36,
+    "total": 121
+   },
+   "waitMs": 852,
+   "genMs": 6400,
+   "medianGapMs": 36
+  },
+  "documents|llama-70b|has-pna|treatment": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Quelle antibiothérapie probabiliste ? Molécule, posologie, durée. Cite tes sources précisément : le document, la page et le passage mot pour mot.",
+   "sources": null,
+   "semantic": false,
+   "text": "Ciprofloxacine, 500 mg 2 fois par jour, 7 jours. \nSource : Fiche HAS 2025, page 2, \"1e intention : en l'absence de traitement par quinolone dans les 6 mois : fluoroquinolones par voie orale : ciprofloxacine : 500 mg 2 fois par jour ou lévofloxacine : 500 mg par jour\" et \"ciprofloxacine : 500 mg 2 fois par jour ou lévofloxacine 500 mg 1 fois par jour ou ofloxacine : 200 mg 2 fois par jour pendant 7 jours ;\"",
+   "usage": {
+    "prompt": 1401,
+    "completion": 147,
+    "total": 1548
+   },
+   "waitMs": 749,
+   "genMs": 7503,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|has-pna|severity": {
+   "prompt": "Quels sont les critères de gravité d’une pyélonéphrite aiguë ?",
+   "sources": null,
+   "semantic": false,
+   "text": "Les critères de gravité ne sont pas explicitement définis dans le texte fourni. Cependant, on peut déduire qu'une pyélonéphrite aiguë à risque de complication sans signe de gravité nécessite un traitement probabiliste similaire à celui de la pyélonéphrite simple. Les signes de gravité pourraient inclure des facteurs tels que la fièvre élevée, les signes de septicémie, l'insuffisance rénale aiguë, etc., mais ces critères ne sont pas spécifiquement énumérés dans le texte fourni.",
+   "usage": {
+    "prompt": 1361,
+    "completion": 142,
+    "total": 1503
+   },
+   "waitMs": 308,
+   "genMs": 612,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|has-pna|duration": {
+   "prompt": "Quelle est la durée de traitement recommandée pour une pyélonéphrite aiguë simple ?",
+   "sources": null,
+   "semantic": false,
+   "text": "La durée de traitement recommandée pour une pyélonéphrite aiguë simple est de 7 à 10 jours selon la molécule utilisée. Par exemple, les fluoroquinolones (ciprofloxacine, lévofloxacine, ofloxacine) sont prescrites pour 7 jours, tandis que les autres traitements comme l'amoxicilline, le cotrimoxazole, l'amoxicilline-acide clavulanique et la cefixime le sont pour 10 jours.",
+   "usage": {
+    "prompt": 1344,
+    "completion": 118,
+    "total": 1462
+   },
+   "waitMs": 1325,
+   "genMs": 2771,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|has-pna|pregnancy": {
+   "prompt": "Quelle antibiothérapie pour une pyélonéphrite aiguë chez la femme enceinte ?",
+   "sources": null,
+   "semantic": false,
+   "text": "Céftriaxone (1g/jour) en 1ère intention, ou amoxicilline (1g, 3 fois par jour) en traitement de relais, pendant 10 jours.",
+   "usage": {
+    "prompt": 1346,
+    "completion": 45,
+    "total": 1391
+   },
+   "waitMs": 670,
+   "genMs": 2374,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|has-pna|imaging": {
+   "prompt": "Faut-il faire une imagerie devant une pyélonéphrite aiguë simple ?",
+   "sources": null,
+   "semantic": false,
+   "text": "Non, sauf si pyélonéphrite hyperalgique ou en cas d'évolution défavorable après 72 heures d'antibiothérapie, une échographie rénale est indiquée dans les 24 premières heures.",
+   "usage": {
+    "prompt": 1341,
+    "completion": 58,
+    "total": 1399
+   },
+   "waitMs": 374,
+   "genMs": 554,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|omedit|treatment": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Quelle antibiothérapie probabiliste ? Molécule, posologie, durée. Cite tes sources précisément : le document, la page et le passage mot pour mot.",
+   "sources": null,
+   "semantic": false,
+   "text": "Amoxicilline + acide clavulanique, 1 g/8h, 7 à 10 jours. \nOMEDIT 2021, page 1, « Amoxicilline + acide clavulanique (schéma 1) — DFG ≥ 30 : 1 g/8h ; DFG 15 à 29 : DC de 1 g puis 500 mg/8h ; DFG < 15 : DC de 1 g puis 750 mg/24h ».",
+   "usage": {
+    "prompt": 2121,
+    "completion": 111,
+    "total": 2232
+   },
+   "waitMs": 950,
+   "genMs": 2072,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|omedit|severity": {
+   "prompt": "Quels sont les critères de gravité d’une pyélonéphrite aiguë ?",
+   "sources": null,
+   "semantic": false,
+   "text": "Molécule : non spécifiée.\nPosologie : non applicable.\nDurée : non applicable.",
+   "usage": {
+    "prompt": 2061,
+    "completion": 23,
+    "total": 2084
+   },
+   "waitMs": 807,
+   "genMs": 431,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|omedit|duration": {
+   "prompt": "Quelle est la durée de traitement recommandée pour une pyélonéphrite aiguë simple ?",
+   "sources": null,
+   "semantic": false,
+   "text": "7 à 10 jours.",
+   "usage": {
+    "prompt": 2062,
+    "completion": 7,
+    "total": 2069
+   },
+   "waitMs": 626,
+   "genMs": 213,
+   "medianGapMs": 43
+  },
+  "documents|llama-70b|omedit|pregnancy": {
+   "prompt": "Quelle antibiothérapie pour une pyélonéphrite aiguë chez la femme enceinte ?",
+   "sources": null,
+   "semantic": false,
+   "text": "Ceftriaxone 1 à 2 g/24h.",
+   "usage": {
+    "prompt": 2065,
+    "completion": 16,
+    "total": 2081
+   },
+   "waitMs": 988,
+   "genMs": 39,
+   "medianGapMs": 2
+  },
+  "documents|llama-70b|omedit|imaging": {
+   "prompt": "Faut-il faire une imagerie devant une pyélonéphrite aiguë simple ?",
+   "sources": null,
+   "semantic": false,
+   "text": "Non, pas systématiquement. Imagerie si : douleur persistante, février, antécédents de malformations ou de calculs, échec du traitement.",
+   "usage": {
+    "prompt": 2061,
+    "completion": 41,
+    "total": 2102
+   },
+   "waitMs": 685,
+   "genMs": 606,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|has-pna+omedit|treatment": {
+   "prompt": "Femme de 68 ans, 62 kg. Pyélonéphrite aiguë communautaire sans signe de gravité. DFG estimé à 38 mL/min. Quelle antibiothérapie probabiliste ? Molécule, posologie, durée. Cite tes sources précisément : le document, la page et le passage mot pour mot.",
+   "sources": null,
+   "semantic": false,
+   "text": "Ciprofloxacine, 500 mg 2 fois par jour, 7 jours. \nSource : Fiche HAS 2025 — pyélonéphrite aiguë de la femme, page 2, \"Traitements recommandés : - 1e intention : en l'absence de traitement par quinolone dans les 6 mois : - fluoroquinolones par voie orale : ciprofloxacine : 500 mg 2 fois par jour ou lévofloxacine : 500 mg par jour\" et OMEDIT 2021 — antibiotiques et insuffisance rénale, page 1, \"Ciprofloxacine PO — DFG ≥ 60 : 500 ou 750 mg/8 à 12h ; DFG 30 à 59 : 500 ou 750 mg/12 à 24h ; DFG < 30 : 500 à 750 mg/24h\".",
+   "usage": {
+    "prompt": 3360,
+    "completion": 204,
+    "total": 3564
+   },
+   "waitMs": 1307,
+   "genMs": 13879,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|has-pna+omedit|severity": {
+   "prompt": "Quels sont les critères de gravité d’une pyélonéphrite aiguë ?",
+   "sources": null,
+   "semantic": false,
+   "text": "Les critères de gravité d'une pyélonéphrite aiguë ne sont pas explicitement énumérés dans les documents fournis, mais on peut déduire que les signes de gravité incluent une évolution clinique défavorable, des signes de septicémie, ou des facteurs de risque de complication tels que l'insuffisance rénale sévère, l'immunodépression, ou l'âge avancé avec comorbidités. Cependant, les documents se concentrent sur les facteurs de risque de complication et les traitements appropriés plutôt que sur les critères de gravité spécifiques.",
+   "usage": {
+    "prompt": 3300,
+    "completion": 151,
+    "total": 3451
+   },
+   "waitMs": 797,
+   "genMs": 9055,
+   "medianGapMs": 1
+  },
+  "documents|llama-70b|has-pna+omedit|duration": {
+   "prompt": "Quelle est la durée de traitement recommandée pour une pyélonéphrite aiguë simple ?",
+   "sources": null,
+   "semantic": false,
+   "text": "La durée de traitement recommandée pour une pyélonéphrite aiguë simple est de 7 jours pour les fluoroquinolones et de 10 jours pour les autres antibiotiques.",
+   "usage": {
+    "prompt": 3303,
+    "completion": 43,
+    "total": 3346
+   },
+   "waitMs": 873,
+   "genMs": 695,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|has-pna+omedit|pregnancy": {
+   "prompt": "Quelle antibiothérapie pour une pyélonéphrite aiguë chez la femme enceinte ?",
+   "sources": null,
+   "semantic": false,
+   "text": "Céfixime 200 mg 2 fois par jour pendant 10 jours ou amoxicilline 1 g 3 fois par jour pendant 10 jours.",
+   "usage": {
+    "prompt": 3306,
+    "completion": 35,
+    "total": 3341
+   },
+   "waitMs": 1057,
+   "genMs": 530,
+   "medianGapMs": 0
+  },
+  "documents|llama-70b|has-pna+omedit|imaging": {
+   "prompt": "Faut-il faire une imagerie devant une pyélonéphrite aiguë simple ?",
+   "sources": null,
+   "semantic": false,
+   "text": "Non, sauf si pyélonéphrite hyperalgique ou en cas d'évolution défavorable après 72 heures d'antibiothérapie.",
+   "usage": {
+    "prompt": 3300,
+    "completion": 38,
+    "total": 3338
+   },
+   "waitMs": 1011,
+   "genMs": 2028,
+   "medianGapMs": 0
+  }
+ },
+ "capturedAt": "2026-10-14",
+ "backend": "http://localhost:8010"
+}

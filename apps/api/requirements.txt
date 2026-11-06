@@ -1,0 +1,11 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+httpx==0.28.1
+pydantic==2.10.4
+
+# Recherche sémantique (optionnelle) : le modèle tourne sur ce serveur.
+# onnxruntime seul suffit — pas de PyTorch, pas de sentence-transformers,
+# ce qui garde l'image sous les 500 Mo.
+onnxruntime==1.20.1
+tokenizers==0.21.0
+numpy==2.2.1

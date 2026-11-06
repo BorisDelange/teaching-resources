@@ -1,0 +1,88 @@
+{
+  "app": {
+    "title": "EDucation SAnté Numérique - Ressources pédagogiques",
+    "subtitle": "Boris Delange - Academic Hospital Assistant in Medical Informatics"
+  },
+  "nav": {
+    "home": "Home",
+    "settings": "Settings",
+    "closeMenu": "Close menu"
+  },
+  "home": {
+    "heading": "Teaching resources",
+    "coursesTitle": "Available courses",
+    "searchPlaceholder": "Search a course or module",
+    "noResults": "No results for \"{{query}}\""
+  },
+  "course": {
+    "back": "Back",
+    "notFound": "Course not found"
+  },
+  "module": {
+    "notFound": "Module not found",
+    "underConstruction": "Under construction",
+    "underConstructionBadge": "Under construction",
+    "underConstructionBanner": "This tutorial is under construction: its content and features may still change."
+  },
+  "localData": {
+    "open": "Delete local data",
+    "title": "Delete local data",
+    "description": "Clears the data saved in this browser for the tutorials (typed answers, votes, settings). Your theme and language preferences are kept. This action cannot be undone.",
+    "confirm": "Delete data",
+    "cancel": "Cancel",
+    "done": "Local data deleted."
+  },
+  "about": {
+    "title": "About",
+    "open": "About this site",
+    "links": "Links",
+    "repo": "Site source code",
+    "repoHint": "Open Git repository on Framagit: content, code and change history.",
+    "edsan": "EDSAN programme",
+    "edsanHint": "Digital health education — University of Rennes.",
+    "license": "License",
+    "licenseContent": "The teaching content on this site is published under the",
+    "licenseSource": "The source code of this site is published under the",
+    "licenseThirdParty": "You may reuse and adapt it for your own teaching, provided you credit the author and share your derivative versions under the same license. Some third-party items (figures, guideline excerpts) keep their own terms."
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "If you have any questions about this course or the teaching materials, feel free to contact us:",
+    "name": "Boris Delange",
+    "role": "Academic Hospital Assistant in Medical Informatics",
+    "email": "boris.delange@univ-rennes.fr"
+  },
+  "footer": {
+    "copyright": "© {{year}} University of Rennes — {{app}}"
+  },
+  "settings": {
+    "heading": "Settings",
+    "description": "Manage your appearance and language preferences.",
+    "appearance": "Appearance",
+    "theme": "Theme",
+    "themeHint": "Choose a light or dark theme.",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "layout": "Navigation layout",
+    "layoutHint": "Show navigation as top tabs or a sidebar.",
+    "layoutHeader": "Top tabs",
+    "layoutSidebar": "Sidebar",
+    "language": "Language",
+    "languageHint": "Language used across the interface."
+  },
+  "settingsMenu": {
+    "open": "Settings"
+  },
+  "mode": {
+    "server": "Server mode",
+    "client": "Client mode",
+    "offline": "Offline",
+    "serverHelp": "A backend ships with the site: it can query the models and holds the API key, which never passes through your browser.",
+    "clientHelp": "The site runs on its own, with no backend. It can still query an API (Ollama, OpenRouter…) directly from your browser, if you configure one in the settings.",
+    "offlineHelp": "No network calls: the session replays answers genuinely produced by these models and recorded in advance, with their timings and token counts."
+  },
+  "toc": {
+    "title": "On this page",
+    "toggle": "Show or hide the outline"
+  }
+}

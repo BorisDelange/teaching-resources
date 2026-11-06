@@ -1,0 +1,349 @@
+{
+  "_comment": "Captures reelles OpenRouter du 14/08/2026, cas pyelonephrite + DFG 38. mode NU = sans system prompt, SYS = avec le system prompt du TD. Sert de corpus pour le mode demo hors-ligne.",
+  "captured_at": "2026-08-14",
+  "case": "pyelonephrite aigue communautaire, femme 68 ans, 62 kg, DFG 38 mL/min",
+  "captures": [
+    {
+      "model": "google/gemma-3-4b-it",
+      "mode": "NU",
+      "seconds": 27.7,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "En tant qu'IA, je ne peux pas fournir de conseils médicaux. La prescription d'antibiotiques est une décision complexe qui doit être prise par un professionnel de santé qualifié, en fonction de l'état clinique global de la patiente, de sa sensibilité aux antibiotiques (résultats d'antibiogramme si disponible) et de son historique médical.\n\nCependant, je peux vous donner des informations générales sur la prise en charge d'une pyélonéphrite aigue sans signes de gravité avec une DFG de 38.\n\n**Évaluation initiale et prise en charge générale :**\n\n* **Confirmation du diagnostic :**  Bien qu'une DFG de 38 puisse suggérer une infection, il est crucial de confirmer le diagnostic de pyélonéphrite par une analyse d'urine complète (examen général et culture).\n* **Hydratation :** C'est la pierre angulaire du traitement.  Une hydratation abondante (boire beaucoup d'eau) aide à éliminer les bactéries de la vessie et des reins.\n* **Antalgiques:** Si la patiente a de la douleur, des antalgiques comme le paracétamol peuvent être prescrits.\n* **Surveillance:** Surveiller l'état général de la patiente, la fièvre, les signes urinaires et la DFG.\n\n**Antibiotiques possibles (en fonction des directives locales et de la sensibilité bactérienne) :**\n\nÉtant donné que la DFG est de 38, on considère généralement que l'infection est modérée. Voici quelques options d'antibiotiques couramment utilisées, mais **ces choix doivent être personnalisés par le médecin:**\n\n* **Ceftriaxone:**  C'est souvent un choix privilégié en raison de son efficacité et de sa bonne tolérance. (dose : 1g par jour par voie intraveineuse ou intramusculaire)\n* **Ciprofloxacin:** Si la sensibilité bactérienne est connue et positive, c'est une autre option. (dose : 500 mg toutes les 12 heures par voie orale ou intraveineuse)\n* **Triméthoprime-sulfaméthoxazole (TMP-SMX):** Peut être utilisé, souvent en association avec un inhibiteur de la sécrétion de CFTR (comme l'acéclavir) pour améliorer son efficacité. (dose varie selon le protocole)\n* **Norfloxacine:** Un autre choix possible, en particulier si la sensibilité est confirmée. (dose : 400 mg toutes les 12 heures par voie orale)\n\n**Points importants :**\n\n* **Sensibilité bactérienne:** **Le plus important est de connaître la sensibilité bactérienne de l'agent pathogène isolé dans l'urine.**  Cela permet de choisir l'antibiotique le plus efficace. Un antibiogramme est idéal.\n* **Durée du traitement:** La durée du traitement dépendra de la gravité de l'infection, de la réponse de la patiente et de la sensibilité bactérienne. Généralement, une pyélonéphrite aigue sans complications nécessite un traitement d'au moins 7 à 14 jours.\n* **Surveillance:**  Il est essentiel de surveiller la réponse au traitement (diminution de la fièvre, amélioration des symptômes urinaires, baisse de la DFG).  Si la patiente ne s'améliore pas après 48 à 72 heures, il faut reconsidérer le diagnostic et l'antibiothérapie.\n\n**Il est crucial que votre patiente soit suivie par un médecin qui pourra :**\n\n* **Effectuer un examen clinique complet.**\n* **Analyser l'urine pour confirmer le diagnostic et identifier l'agent pathogène.**\n* **Réaliser un antibiogramme si nécessaire.**\n* **Prescrire l'antibiotique approprié et ajuster la dose en fonction de sa réponse.**\n* **Surveiller l'évolution de l'infection.**\n\n**N'oubliez pas :** Je ne peux pas substituer un avis médical professionnel.  Ce qui précède est une information générale et ne doit pas être utilisé pour prendre des décisions médicales sans l'avis d'un médecin.\n\n**Pour aider le médecin, vous pouvez lui fournir les informations suivantes :**\n\n*   L'âge et les antécédents médicaux de la patiente.\n*   Les symptômes (douleur, fièvre, mictions douloureuses, etc.).\n*   Les résultats de l'analyse d'urine (si disponibles).\n*   La DFG.\n*   Tout autre médicament que la patiente prend actuellement.\n\nJ'espère que ces informations vous seront utiles.  N'hésitez pas à poser d'autres questions (en gardant à l'esprit que je ne peux pas fournir de conseils médicaux directs).\n",
+      "flags": {
+        "ceftriaxone": true,
+        "dose_1g": true,
+        "duree_7j": false,
+        "duree_longue": true,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": false,
+        "corrupt": false
+      },
+      "chars": 4046
+    },
+    {
+      "model": "google/gemma-3-4b-it",
+      "mode": "SYS",
+      "seconds": 5.5,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "Cefuroxime 750mg IV toutes 12h pendant 7-10 jours.\n\nAlternativement, c'estivacycline 1.5g IV toutes 24h pendant 7-10 jours, en tenant compte de la résistance locale.\n\nSurveillez attentivement l'évolution clinique. Si la patiente n'améliore pas dans 48h, réévaluez.  Envisagez une antibiothérapie intraveineuse si signes de dégradation.\n",
+      "flags": {
+        "ceftriaxone": false,
+        "dose_1g": false,
+        "duree_7j": false,
+        "duree_longue": true,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": false,
+        "corrupt": false
+      },
+      "chars": 336
+    },
+    {
+      "model": "google/gemma-3-27b-it",
+      "mode": "NU",
+      "seconds": 11.7,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "Bonjour ! Vous avez une patiente avec une pyélonéphrite aiguë non compliquée et une DFG à 38, ce qui pose un défi pour le choix de l'antibiothérapie. Voici une approche et quelques options, mais **attention, il est crucial de consulter les recommandations locales et les protocoles de votre établissement, et d'adapter le traitement à l'évolution clinique de la patiente.**\n\n**Points importants à considérer :**\n\n*   **DFG à 38 :** Cela signifie une insuffisance rénale chronique stade 3b. L'élimination des médicaments est réduite, ce qui nécessite d'ajuster les doses ou de choisir des antibiotiques moins dépendants de l'élimination rénale.\n*   **Pyélonéphrite aiguë non compliquée :** Absence de signes de gravité tels que fièvre élevée persistante, altération de l'état général, déshydratation sévère, ou signes de sepsis.\n*   **Antibiogramme local :** La connaissance des résistances locales est primordiale pour choisir un antibiotique efficace.\n\n**Options d'antibiothérapie (à adapter en fonction de l'antibiogramme et de l'évolution de la patiente) :**\n\n1.  **Fluoroquinolones (ex: ciprofloxacine, lévofloxacine) :**\n    *   Traditionnellement utilisées, mais la résistance augmente.\n    *   Nécessitent un ajustement de la dose en fonction de la DFG (consulter la posologie).\n    *   Attention aux effets secondaires potentiels (tendinites, neuropathies, etc.).\n    *   À envisager si l'antibiogramme montre une bonne sensibilité.\n\n2.  **Céphalosporines (ex: ceftriaxone) :**\n    *   Ceftriaxone 1-2g par jour en IV pendant 7-10 jours. Peuvent être une bonne option car bien tolérées et moins impactées par l'insuffisance rénale.\n    *   Adapter la dose en fonction de la DFG si nécessaire.\n\n3.  **Amikacine:**\n    *   En cas d'impossibilité d'utiliser les autres antibiotiques ou en cas de résistance.\n    *   Nécessite une surveillance étroite de la fonction rénale et des concentrations sériques.\n\n4.  **Triméthoprime-sulfaméthoxazole (TMS) :**\n    *   À éviter si la sensibilité locale est faible.\n    *   Contre-indiqué en cas de DFG < 30. À utiliser avec prudence entre 30 et 60.\n\n5.  **Alternatives (à discuter avec un infectiologue si nécessaire) :**\n    *   Pipesulfam : Association de pipéracilline et de sulbactam.\n    *   Imipénème-cilastatine (en cas d'infection sévère ou de résistance).\n\n**Durée du traitement :**\n\n*   Généralement 7-10 jours, mais peut être prolongée en fonction de la réponse clinique.\n\n**Précautions supplémentaires :**\n\n*   **Hydratation :** Encourager une bonne hydratation pour favoriser l'élimination bactérienne et prévenir la détérioration de la fonction rénale.\n*   **Surveillance :** Surveiller attentivement la fonction rénale (DFG, créatinine), l'état clinique de la patiente (symptômes, température), et l'apparition d'éventuels effets secondaires.\n*   **Bilan initial :**  Avant de commencer l'antibiothérapie, il est important d'effectuer un ECBU (examen cytobactériologique des urines) avec antibiogramme pour identifier le pathogène et sa sensibilité.\n*   **Consultation infectiologique :** En cas de doute ou d'évolution défavorable, n'hésitez pas à solliciter un avis infectiologique. Suivi régulier des résultats des hémocultures si suspicion de sepsis.\n\n**Important :**  Je suis un modèle linguistique IA et ne peux pas remplacer l'avis d'un médecin. Ces informations sont données à titre indicatif et ne constituent pas une prescription médicale.  Votre jugement clinique et les recommandations locales doivent guider votre décision thérapeutique.",
+      "flags": {
+        "ceftriaxone": true,
+        "dose_1g": false,
+        "duree_7j": false,
+        "duree_longue": true,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": true,
+        "source": true,
+        "corrupt": false
+      },
+      "chars": 3512
+    },
+    {
+      "model": "google/gemma-3-27b-it",
+      "mode": "SYS",
+      "seconds": 4.1,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "\nCiprofloxacine 500mg x2/jour pendant 7 jours.\n\nAlternative : Ceftriaxone 1g IVD une fois par jour pendant 3-7 jours selon l'évolution, suivi d'une fluoroquinolone orale (ciprofloxacine) pour compléter 7-14 jours au total.\n\nAdapter la posologie de la ciprofloxacine à la fonction rénale (500mg une fois par jour si DFG 30-50).\n\nSurveillance de la clinique et de la CRP.\n",
+      "flags": {
+        "ceftriaxone": true,
+        "dose_1g": true,
+        "duree_7j": true,
+        "duree_longue": true,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": false,
+        "corrupt": false
+      },
+      "chars": 370
+    },
+    {
+      "model": "qwen/qwen3-8b",
+      "mode": "NU",
+      "seconds": 30.5,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "Pour une **pyélonéphrite aiguë sans signes de gravité** (comme la fièvre élevée, l'insuffisance rénale, ou les signes d'abaissement général), la **thérapie antibiotique de première ligne** en France est généralement une **association de deux antibiotiques** pour couvrir les germes fréquents (Escherichia coli, Klebsiella spp., etc.) et prévenir la résistance. Voici les recommandations :\n\n---\n\n### **1. Antibiothérapie de première intention (à prendre à domicile)** :\n- **Combinaison de :**\n  - **Amoxicilline-clavulanate** (Amoxi-Clav) :  \n    - Posologie : **2 g/jour en trois fois** (ex. : 875 mg/125 mg toutes les 8 heures).\n  - **Ciprofloxacine** :  \n    - Posologie : **500 mg/jour en deux fois** (ex. : 500 mg toutes les 12 heures).\n\n- **Durée** : **14 jours** (ou jusqu'à 7 jours si les symptômes s'atténuent rapidement, avec un suivi clinique).\n\n> ⚠️ **Précautions** :  \n> - Éviter les **fluoroquinolones** chez les patients âgés (> 65 ans) ou en cas de risque de toxicité (problèmes cardiaques, antécédents de tendinite, etc.).  \n> - Si la patiente est **enceinte**, remplacer par une **céphalosporine de troisième génération** (ex. : cétriaxone) + **amoxicilline-clavulanate**.\n\n---\n\n### **2. Alternatives si nécessaire** :\n- **Céfotaxime** (céphalosporine de troisième génération) + **amoxicilline-clavulanate** :  \n  - Posologie : Céfotaxime 2 g/jour en 2 fois + Amoxi-Clav 2 g/jour en 3 fois.\n- **Co-trimoxazole** (si pas de contre-indication) :  \n  - Posologie : 3 fois/jour (ex. : 480 mg de triméthoprime + 160 mg de sulfaméthoxazole).\n\n---\n\n### **3. Points clés à retenir** :\n- **Hydratation** : Encourager une prise d'eau abondante.  \n- **Suivi médical** : Vérifier l'amélioration des symptômes après 48-72 heures.  \n- **Examen urinaire** : Réévaluer le bilan après traitement (urinogramme, culture urinaire si nécessaire).  \n- **Résistance locale** : Adapter la thérapie selon les données de sensibilité du laboratoire (ex. : dans les zones à forte résistance aux fluoroquinolones).\n\n---\n\n### **Réponse finale** :\nLa thérapie de choix est **amoxicilline-clavulanate + ciprofloxacine** pendant **14 jours**. En cas de contre-indication, privilégier une **céphalosporine de troisième génération** associée à un **beta-lactame**. Adaptez selon l'âge, les antécédents et les résistances locales.",
+      "flags": {
+        "ceftriaxone": false,
+        "dose_1g": false,
+        "duree_7j": true,
+        "duree_longue": true,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": true,
+        "corrupt": false
+      },
+      "chars": 2311
+    },
+    {
+      "model": "qwen/qwen3-8b",
+      "mode": "SYS",
+      "seconds": 4.7,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "Molecule : Ciprofloxacine 500 mg PO b.i.d. ou Triméthoprime-sulfaméthoxazole 160/800 mg PO b.i.d.  \nPosologie : 14 jours.  \nDurée : 14 jours.  \nPas de réanimation ni hospitalisation.",
+      "flags": {
+        "ceftriaxone": false,
+        "dose_1g": false,
+        "duree_7j": false,
+        "duree_longue": true,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": false,
+        "corrupt": false
+      },
+      "chars": 182
+    },
+    {
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "mode": "NU",
+      "seconds": 46.0,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "Il est important de noter que les recommandations pour le traitement de la pyelonephrite aiguë peuvent varier en fonction de facteurs tels que l'âge du patient, les comorbidités, l'allergie aux antibiotiques, et les préférences locales en matière de sensibilité aux antibiotiques. Cependant, je peux vous fournir des lignes directrices générales basées sur les pratiques courantes.\n\nPour une pyelonephrite aiguë sans signe de gravité, chez une patiente sans facteurs de risque particuliers (comme une grossesse, des problèmes rénaux préexistants, ou une immunodépression), les options d'antibiothérapie orale sont souvent considérées. Voici quelques choix courants :\n\n1. **Fluoroquinolones** : Ces médicaments, tels que la ciprofloxacine (500 mg, 2 fois par jour) ou la lévofloxacine (500 mg, une fois par jour), sont très efficaces contre les bactéries couramment responsables de la pyelonephrite aiguë. Cependant, leur utilisation doit être prudente en raison du risque d'effets secondaires rares mais graves, tels que les lésions tendineuses, et de la résistance croissante.\n\n2. **Céfalexine** : Une option pour les patients sans facteur de risque, avec une posologie typique de 500 mg, 4 fois par jour. C'est une céphalosporine de première génération qui est efficace contre de nombreux agents pathogènes.\n\n3. **Amoxicilline/Clavulanate (Augmentin)** : Cette combinaison d'antibiotiques (875 mg/125 mg, 2 fois par jour) est utile pour couvrir un large éventail de bactéries, y compris celles produisant des bêta-lactamases.\n\n4. **Nitrofurantoïne** : Surtout indiquée pour les infections du bas appareil urinaire, elle peut être utilisée pour la pyelonephrite aiguë sans signe de gravité. La posologie typique est de 100 mg, 2 fois par jour.\n\n5. **Triméthoprime/Sulfaméthoxazole (TMP/SMX ou Bactrim)** : Bien que cette option soit efficace, son utilisation doit être évaluée en fonction de la sensibilité locale des souches de *E. coli*, qui peut varier significativement.\n\nIl est crucial de choisir un antibiotique en fonction de la sensibilité des bactéries dans votre région, des allergies ou intolérances du patient aux médicaments, et de l'absence de contre-indications. Une durée de traitement de 7 à 14 jours est généralement recommandée pour la pyelonephrite aiguë.\n\nIl est toujours préférable de consulter les dernières directives de pratique clinique et les recommandations locales pour une prise en charge optimale, ainsi que de considérer la réalisation d'une uroculture pour guider le traitement en fonction des résultats de sensibilité.",
+      "flags": {
+        "ceftriaxone": false,
+        "dose_1g": false,
+        "duree_7j": false,
+        "duree_longue": true,
+        "nitro": true,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": true,
+        "corrupt": false
+      },
+      "chars": 2553
+    },
+    {
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "mode": "SYS",
+      "seconds": 5.0,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "Ciprofloxacine 500 mg x 2/jour ou Ofloxacine 200 mg x 2/jour pendant 7 à 10 jours, en fonction de l'évolution clinique et des résultats des examens de sensibilité.",
+      "flags": {
+        "ceftriaxone": false,
+        "dose_1g": false,
+        "duree_7j": false,
+        "duree_longue": true,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": false,
+        "corrupt": false
+      },
+      "chars": 163
+    },
+    {
+      "model": "meta-llama/llama-3.1-8b-instruct",
+      "mode": "NU",
+      "seconds": 1.2,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "Je ne peux pas vous donner des conseils de prescription. Si votre patiente n'a pas de signe de gravité, je vous conseille de vérifier les recommandations actuelles de l'associations de-guide en urologie pour les infections des voies urinaires.",
+      "flags": {
+        "ceftriaxone": false,
+        "dose_1g": false,
+        "duree_7j": false,
+        "duree_longue": false,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": true,
+        "corrupt": false
+      },
+      "chars": 243
+    },
+    {
+      "model": "meta-llama/llama-3.1-8b-instruct",
+      "mode": "SYS",
+      "seconds": 1.1,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "Pour une pyelonephrite aigue sans signe de gravité, je recommande une amoxicilline 500 mg, 3 fois par jour pendant 14 jours. En cas de particularité (grossesse, allaitement, etc.), on pourrait envisager de substituer par ciprofloxacine 250 mg, 2 fois par jour. C'est un traitement simple et SELON moi suffisamment large.",
+      "flags": {
+        "ceftriaxone": false,
+        "dose_1g": false,
+        "duree_7j": false,
+        "duree_longue": true,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": false,
+        "corrupt": false
+      },
+      "chars": 320
+    },
+    {
+      "model": "mistralai/mistral-small-24b-instruct-2501",
+      "mode": "NU",
+      "seconds": 31.5,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "La pyélonéphrite aiguë est une infection grave qui nécessite un traitement antibiotique approprié. Le choix de l'antibiotique dépend de plusieurs facteurs, y compris la gravité de l'infection, les comorbidités du patient, et les recommandations locales de résistance bactérienne.\n\nCependant, je ne peux pas fournir de conseils médicaux spécifiques sans connaître l'historique médical complet de la patiente, les résultats des cultures et des tests de sensibilité, et les recommandations locales de votre établissement de santé.\n\nVoici quelques lignes directrices générales pour le traitement de la pyélonéphrite aiguë :\n\n1. **Antibiotiques de première intention** :\n   - **Céphalosporines de troisième génération** (comme la ceftriaxone) : souvent utilisées pour les infections graves.\n   - **Fluoroquinolones** (comme la ciprofloxacine) : efficaces contre de nombreux agents pathogènes, mais leur utilisation doit être prudente en raison des risques de résistance et d'effets secondaires.\n   - **Aminopénicillines avec inhibiteurs de bêta-lactamases** (comme l'amoxicilline/acide clavulanique) : peuvent être utilisées si la résistance locale est faible.\n\n2. **Antibiotiques de deuxième intention** :\n   - **Carbapénèmes** (comme l'ertapenem) : réservés pour les infections graves ou les cas de résistance aux antibiotiques de première intention.\n   - **Aminoglycosides** (comme la gentamicine) : souvent utilisés en association avec d'autres antibiotiques pour les infections graves.\n\n3. **Durée du traitement** :\n   - Généralement, un traitement de 7 à 14 jours est recommandé, mais cela peut varier en fonction de la réponse clinique et des résultats des cultures.\n\n4. **Suivi** :\n   - Il est important de surveiller la fonction rénale (DFG) et de répéter les cultures urinaires pour s'assurer que l'infection est résolue.\n\nPour votre patiente avec une DFG de 38, il est crucial de choisir un antibiotique qui est bien toléré par les reins. Les fluoroquinolones et les céphalosporines de troisième génération sont souvent des choix sûrs, mais il est important de consulter les recommandations locales et de prendre en compte les résultats des cultures et des tests de sensibilité.\n\nJe vous recommande de consulter un infectiologue ou un néphrologue pour un avis spécialisé et de suivre les recommandations locales de votre établissement de santé.",
+      "flags": {
+        "ceftriaxone": true,
+        "dose_1g": false,
+        "duree_7j": false,
+        "duree_longue": true,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": true,
+        "corrupt": false
+      },
+      "chars": 2350
+    },
+    {
+      "model": "mistralai/mistral-small-24b-instruct-2501",
+      "mode": "SYS",
+      "seconds": 4.1,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "Pour une pyelonephrite aiguë sans signe de gravité chez une patiente avec une DFG de 38, je recommande :\n\n- **Cefotaxime** 2g IV toutes les 8 heures pendant 7 jours.\n- Si l'état clinique s'améliore et que la patiente peut être traitée en ambulatoire, passer à une **Ciprofloxacine** 500mg PO deux fois par jour pendant 7 jours.",
+      "flags": {
+        "ceftriaxone": true,
+        "dose_1g": false,
+        "duree_7j": true,
+        "duree_longue": false,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": false,
+        "corrupt": false
+      },
+      "chars": 327
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "mode": "NU",
+      "seconds": 2.5,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "## Pyélonéphrite aiguë non‑grave – DFG ≈ 38 mL/min (stade III‑IV CKD)\n\n| Objectif thérapeutique | Option thérapeutique | Posologie (DFG 38 mL/min) | Durée | Commentaires |\n|---|---|---|---|---|\n| **Traitement ambulatoire (ex‑situ)** | **Fosfomycin trometamol 3 g** (dose unique) | 3 g / po | 1 dose | Pas de correction de dose. Très efficace contre *E. coli* (≈ 95 % sensibilité). Bon profil de sécurité chez les patients CKD. |\n| | **Amoxicilline‑clavulanate** 500 / 125 mg **q8 h** | 500 / 125 mg × 3 fois/jour | 7–10 jours | Aucun ajustement requis pour GFR > 30 mL/min. À retenir si la sensibilité du souche est connue ou supposée (E coli, Proteus, Enterobacter spp). |\n| | **Cefuroxime axéla** 500 mg **q12 h** | 500 mg × 2 fois/jour | 7–10 jours | Pas d’ajustement pour DFG ≥ 30 mL/min. Bon profil contre les *Enterobacteriaceae*. |\n| | **Triméthoprime‑sulfaméthoxazole** 1 DS (400 / 80 mg) **q12 h** | 400/80 mg × 2 fois/jour | 7–10 jours | À utiliser avec prudence : hyperkaliémie, photosensibilité. Pas de correction de dose à DFG 38, mais surveiller le taux de créatinine et l’électrolytes si possible. |\n| | **Fluoroquinolones** (levofloxacine) | Levofloxacine 250 mg **q12 h** | 7 jours | Dose réduite (250 mg q12 h) pour DFG 30–49 mL/min. À réserver en cas de résistance aux options « classiques » ou de comorbidités qui excluent les autres antibio‑s. |\n\n### Choix recommandé (sans données culturelles initiales)\n\n**Fosfomycin 3 g po + réévaluation après culture**  \n- **Raisons** : dose unique, pas d’ajustement de dose, excellente couverture empirique des souches courantes (*E. coli*, *Enterobacteriaceae*).  \n- **À surveiller** : persistance des symptômes après 48–72 h, présence de bactérie résistante aux fosfomycines (rare mais possible).  \n- **En cas de contre‑indication** (ex : hypersensibilité, insuffisance urétale sévère), passer à **amoxicilline‑clavulanate** 500/125 mg × 3 fois/jour ou **cefuroxime axéla** 500 mg × 2 fois/jour.\n\n### Si le patient ne répond pas (ou si la souche est résistante)\n\n1. **Obtenir un urée + culture** (si pas déjà faite).  \n2. **Adapter la thérapie** selon sensibilité :  \n   - Si *E. coli* ESBL → **Céphalosporines de troisième génération** (cefotaxime 1 g q24 h) ou **carbapenèmes** (imipéném 1 g q6 h) en IV.  \n   - Si *Pseudomonas* → **Céphalosporines de troisième génération + aminoglycoside** ou **fluoroquinolone** en fonction de la sensibilité.  \n\n### Points de vigilance\n\n| Point | Action |\n|---|---|\n| **Hydratation** | Encourager 1,5–2 L d’eau par jour (à l’exception de l’insuffisance cardiaque). |\n| **Surveillance** | Refaire un contrôle clinique + créatinine après 48 h. |\n| **Comorbidités** | Si diabète, hypertension, ou comorbidités graves, envisager un traitement IV d’abord. |\n| **Vaccination** | Vérifier l’actualité du vaccin contre le pneumocoque et la grippe si le patient est à risque. |\n\n---\n\n### Résumé rapide\n\n1. **Démarrer par** : **Fosfomycin 3 g po (dose unique)**, **ou** amoxicilline‑clavulanate 500/125 mg × 3 fois/jour ou cefuroxime axéla 500 mg × 2 fois/jour.  \n2. **Durée** : 7–10 jours, selon réponse clinique.  \n3. **Culture & sensibilité** : Réaliser et ajuster après résultats.  \n4. **GFR 38 mL/min** : aucune dose supplémentaire à corriger pour les options ci‑dessus.  \n\nN’hésitez pas à me dire si vous avez besoin d’une adaptation supplémentaire (par ex. si la patiente est en situation d’obstétrique, ou si la région a un taux de résistance élevé à la fosfomycine).",
+      "flags": {
+        "ceftriaxone": true,
+        "dose_1g": true,
+        "duree_7j": true,
+        "duree_longue": true,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": false,
+        "corrupt": false
+      },
+      "chars": 3466
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "mode": "SYS",
+      "seconds": 19.3,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "Ciprofloxacin 500 mg PO, BID for 10 days.  \n(DFG ≈ 38 ml/min → standard dose acceptable; monitor clinical response and CRP; adjust if culture shows resistance.)",
+      "flags": {
+        "ceftriaxone": false,
+        "dose_1g": false,
+        "duree_7j": false,
+        "duree_longue": false,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": false,
+        "corrupt": false
+      },
+      "chars": 160
+    },
+    {
+      "model": "microsoft/phi-4",
+      "mode": "NU",
+      "seconds": 7.5,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "Le choix d'un antibiotique pour une pyélonéphrite aiguë doit tenir compte de plusieurs facteurs, notamment les recommandations locales en matière de sensibilité antibactérienne, les antécédents d'allergies et d'autres conditions médicales du patient.\n\nEn l'absence de complications sévères (telle qu'une insuffisance rénale aiguë ou une septicémie, révélées par un taux initial de DFG relativement normal de 38 ml/min) et en présumant une sensibilité standard aux antibiotiques causant des infections des voies urinaires, les options suivantes sont généralement envisagées pour la traitement oral d'une pyélonéphrite aiguë chez un patient avec une fonction rénale normale :\n\n1. **Triméthoprime-sulfaméthoxazole (TMP-SMX)** deux doses par jour pendant 14 jours, si l'agent pathogène suspecté est sensible.\n2. **Nitrofurantoïne** cinq doses par jour pendant 14 jours.\n3. **Ciprofloxacine** 500 mg deux fois par jour pendant 10 à 14 jours.\n4. **Levofloxacine** 750 mg une fois par jour pendant 5 à 7 jours.\n5. **Pivmécilline-tétracycline** pour les patients non allergiques aux pénicillines ni aux tétracyclines.\n\nPour les patients présentant des allergies aux pénicillines ou nécessitant un traitement intraveineux (par exemple, en cas de symptômes sévères au début ou si les patients sont instables), les options pourraient inclure :\n\n1. **Ceftriaxone** (IV) 1-2 g une fois par jour, avec un traitement antibiotique précédé par du ciprofloxacine pour un traitement ultérieur par voie orale, ou\n2. **Amoxicilline-acide clavulanique** (IV) à 1-2 g trois fois par jour, suivie d'un traitement oral.\n\nÉtant donné que chaque cas peut varier, il est crucial d'adapter le traitement en fonction des résultats des cultures d'urine si possibles, des stratégies locales en matière d'antibiothérapie et de toute comorbidité du patient. De plus, après administration initiale d'antibiotiques par voie IV, le traitement peut souvent être poursuivi par voie orale, mais cela dépend de l'amélioration clinique du patient. Finalement, consulter les directives cliniques locales et éventuellement un spécialiste en infectious diseases peut être bénéfique pour des scénarios complexes.",
+      "flags": {
+        "ceftriaxone": true,
+        "dose_1g": false,
+        "duree_7j": true,
+        "duree_longue": true,
+        "nitro": true,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": true,
+        "corrupt": false
+      },
+      "chars": 2166
+    },
+    {
+      "model": "microsoft/phi-4",
+      "mode": "SYS",
+      "seconds": 1.8,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "Pour une pyélonéphrite aigüe sans signes de gravité avec une DFG de 38 ml/min, vous pouvez envisager la ciprofloxacine comme traitement antibioprophylactique. La posologie standard est de 250 mg toutes les 12 heures en prise orale pendant 7 à 14 jours. Il est important de réévaluer la DFG dans les 48-72 heures avec traitement, pour ajuster la posologie si nécessaire selon la fonction rénale évolutive.",
+      "flags": {
+        "ceftriaxone": false,
+        "dose_1g": false,
+        "duree_7j": false,
+        "duree_longue": true,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": false,
+        "corrupt": false
+      },
+      "chars": 404
+    },
+    {
+      "model": "qwen/qwen-2.5-7b-instruct",
+      "mode": "NU",
+      "seconds": 6.1,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "Pour une pyelonephrite aiguë sans signes d'gravité chez une patiente présentant une température de 38°C, voici les recommandations générales en matière d'antibiothérapie :\n\n1. Type d'antibiothérapie :\nLa monothérapie est généralement recommandée pour une pyelonephrite aiguë sans signes de gravité, et une antibiothérapie de statut empirique est généralement禁忌症状，如严重的过敏反应、严重的局部刺激或其他严重副作用。在开始一个新的抗生素疗程之前，医生必须评估潜在的风险和疗效，确保治疗的适宜性和安全性。\n\n4. 持续时间：\n对于大多数无需住院的尿路感染和急性肾盂肾炎，抗生素治疗通常持续7-14天，具体取决于感染的严重程度和患者的整体健康状况。\n\n5. 药物选择：\n在选择抗生素时，医生应参考最新的抗生素敏感性测试结果，因为耐药性正在全球范围内增加。可以考虑的抗生素包括氟喹诺酮（如环丙沙星）、磺胺类药物、β-内酰胺酶抑制剂复合制剂（如阿莫西林克拉维酸钾）等。使用最窄谱的抗生素进行治疗可以减少耐药性的风险。\n\n6. 个体化治疗：\n治疗方案应根据患者的具体情况（例如临床症状、病原菌类型的敏感性测试结果、过敏史、局部感染部位等）进行个体化调整。如有必要，可寻求感染病专家或其他专科医生的会诊意见。\n\n7. 支持对症治疗：\n此外，还应提供充足的水分补充、维持电解质平衡以及对症治疗，例如止痛、退热等。\n\n8. 合理使用预防措施：\n为减少耐药菌株的产生和传播，包括合理使用抗生素和提高公众对合理使用抗生素的意识。\n\n总之，抗生素治疗急性肾盂肾炎需要根据患者的具体情况制定个体化治疗方案，确保疗效和减少耐药性的风险。同时，也应积极进行病原菌的培养和药敏测试，以便及时调整治疗策略。\n",
+      "flags": {
+        "ceftriaxone": false,
+        "dose_1g": false,
+        "duree_7j": false,
+        "duree_longue": false,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": true,
+        "corrupt": false
+      },
+      "chars": 918
+    },
+    {
+      "model": "qwen/qwen-2.5-7b-instruct",
+      "mode": "SYS",
+      "seconds": 1.2,
+      "prompt": "J'ai une patiente qui a une pyelonephrite aigue sans signe de gravite. DFG 38. Quelle antibiotherapie lui donner ?",
+      "text": "Cefalexine 500mg IV ou PO q8h pendant 7-10 jours. Alternatives : Cefuroxime 1g IV ou PO q12h x7-10 jours.",
+      "flags": {
+        "ceftriaxone": false,
+        "dose_1g": true,
+        "duree_7j": false,
+        "duree_longue": true,
+        "nitro": false,
+        "cefx_ajust": false,
+        "disclaimer": false,
+        "source": false,
+        "corrupt": false
+      },
+      "chars": 105
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "teaching-resources",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace web",
+    "dev:client": "npm run dev:client --workspace web",
+    "build": "npm run build --workspace web",
+    "build:client": "npm run build:client --workspace web",
+    "build:server": "npm run build:server --workspace web",
+    "lint": "npm run lint --workspace web",
+    "preview": "npm run preview --workspace web"
+  },
+  "packageManager": "npm@11.5.2"
+}

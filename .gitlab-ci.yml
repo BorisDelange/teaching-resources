@@ -1,0 +1,127 @@
+stages:
+  - build
+  - deploy
+
+# ------------------------------------------------------------------
+# Image Docker du backend « TD chatbots » (apps/api).
+#
+# Publiee sur Docker Hub, et non dans le registry du projet : Framagit
+# n'active pas de container registry (seul un « model registry », qui
+# ne stocke pas d'images, est disponible). L'image est publique, donc
+# tirable sans authentification depuis le serveur de TD :
+#   docker pull borisdelange/univ-rennes-td-llm:latest
+#
+# Deux variables CI a definir dans Settings > CI/CD > Variables :
+#   DOCKERHUB_USER   ton identifiant Docker Hub  (non masque)
+#   DOCKERHUB_TOKEN  un Access Token Docker Hub  (masque + protege)
+# Un token, pas le mot de passe : il se revoque sans tout casser.
+#
+# Construit avec KANIKO, et non « docker build » : les runners partages
+# de Framagit ne tournent pas en mode privilegie, donc le service
+# docker:dind n'y demarre pas. Kaniko construit sans demon Docker.
+#
+# Aucun secret dans l'image : la cle OpenRouter est fournie au RUNTIME
+# (--env-file), jamais construite dedans.
+# ------------------------------------------------------------------
+# Sous-chemin d'accès du site, GRAVE DANS L'IMAGE au moment du build : Vite
+# reecrit les URLs d'assets et le routeur lit la meme valeur (BASE_URL). Il
+# n'est donc PAS modifiable au runtime : l'image construite pour ce prefixe
+# ne se sert pas ailleurs. Pour un autre sous-chemin — ou pour la racine —
+# relancer ce job avec la valeur voulue (formulaire « Run pipeline »).
+#
+# Le serveur, lui, ne connait pas ce prefixe : il sert « /assets/… », pas
+# « /edsan/assets/… ». Le reverse proxy doit donc RETIRER le prefixe avant
+# de transmettre (StripPrefix chez Traefik, ProxyPass chez Apache), sinon
+# les assets et l'API repondent en text/html et la page reste blanche.
+variables:
+  VITE_BASE:
+    value: "/edsan/"
+    description: "Sous-chemin d'accès web, grave dans l'image (ex: /edsan/ ou /)"
+
+build:api-image:
+  stage: build
+  # L'image « debug » de Kaniko : la variante standard n'embarque aucun
+  # shell, et GitLab ne pourrait donc pas y lancer de script.
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  variables:
+    # Depot Docker Hub, en dur : il doit correspondre au depot cree sur
+    # hub.docker.com, pas a l'identifiant qui sert a s'y connecter.
+    IMAGE: borisdelange/univ-rennes-td-llm
+  script:
+    # Echoue tout de suite, avec un message clair, si les variables
+    # manquent : sinon l'erreur d'authentification serait opaque.
+    - |
+      if [ -z "$DOCKERHUB_USER" ] || [ -z "$DOCKERHUB_TOKEN" ]; then
+        echo "DOCKERHUB_USER / DOCKERHUB_TOKEN absents des variables CI." >&2
+        echo "A definir dans Settings > CI/CD > Variables." >&2
+        exit 1
+      fi
+    # Kaniko ne fait pas de « docker login » : il lit ses identifiants
+    # dans ce fichier. L'auth Docker Hub est un « user:token » en base64.
+    - mkdir -p /kaniko/.docker
+    - |
+      AUTH=$(printf '%s:%s' "$DOCKERHUB_USER" "$DOCKERHUB_TOKEN" | base64 | tr -d '\n')
+      cat > /kaniko/.docker/config.json <<EOF
+      {"auths":{"https://index.docker.io/v1/":{"auth":"$AUTH"}}}
+      EOF
+    # Deux tags : « latest » pour tirer sans reflechir, le SHA du commit
+    # pour pouvoir revenir a une version precise apres une seance ratee.
+    # Contexte = racine du depot : l'image embarque aussi le site (apps/web),
+    # inatteignable depuis un contexte limite a apps/api.
+    - /kaniko/executor
+      --context "$CI_PROJECT_DIR"
+      --dockerfile "$CI_PROJECT_DIR/apps/api/Dockerfile"
+      --destination "$IMAGE:latest"
+      --destination "$IMAGE:$CI_COMMIT_SHORT_SHA"
+      --build-arg VITE_BASE="$VITE_BASE"
+  rules:
+    # Jamais automatique : le build telecharge le modele d'embedding
+    # (~118 Mo) et dure plusieurs minutes, alors que l'image ne sert
+    # qu'aux seances en mode serveur. Le job attend un clic sur ▶ dans
+    # le pipeline.
+    #
+    # allow_failure indispensable : sans lui, un job manuel non lance
+    # laisse le pipeline « bloque » et le deploiement Pages n'aurait
+    # jamais lieu.
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: manual
+      allow_failure: true
+
+# GitLab Pages serves the `public/` directory of the `pages` job's artifacts.
+# Site available at: https://teaching-resources-96e174.frama.io/
+pages:
+  stage: deploy
+  image: node:20
+  # Le deploiement du site ne depend pas de l'image du backend : sans ce
+  # « needs: [] », Pages attendrait le stage « build » et donc un clic sur
+  # le job manuel qui s'y trouve.
+  needs: []
+  variables:
+    # Ecrase la valeur globale, prevue pour l'image Docker : Frama.io sert ce
+    # projet a la RACINE de son sous-domaine. Sans cette ligne, le site public
+    # chercherait ses assets sous « /edsan/ » et resterait blanc.
+    VITE_BASE: "/"
+  script:
+    - npm ci
+    # Frama.io serves each project on its own subdomain at the ROOT ("/"),
+    # not under /<repo>/ — so build with base "/" (the Vite default).
+    #
+    # `build:client` (et non `build`) : GitLab Pages ne sert QUE des fichiers
+    # statiques, il n'y a aucun backend au bout. Sans ce drapeau, le site
+    # deploye se croirait connecte a une API (badge « Mode serveur », puis
+    # « serveur injoignable » a la premiere question). Le mode hors ligne
+    # devient donc le mode par defaut du site public, et ne peut pas y etre
+    # desactive.
+    - npm run build:client
+    # SPA fallback so deep routes (/courses/...) resolve on GitLab Pages.
+    - cp apps/web/dist/index.html apps/web/dist/404.html
+    - rm -rf public
+    - mv apps/web/dist public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  environment: production

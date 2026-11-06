@@ -1,0 +1,37 @@
+# Contexte de build de l'image (apps/api/Dockerfile), construite depuis la
+# RACINE du depot puisqu'elle embarque aussi le site (apps/web).
+#
+# Sans ces exclusions, node_modules et les builds locaux partiraient dans le
+# contexte : plusieurs centaines de Mo transferes pour rien, et un risque de
+# masquer les dependances installees dans l'image par celles de l'hote.
+
+node_modules/
+**/node_modules/
+
+# Builds locaux : l'image reconstruit le sien.
+dist/
+**/dist/
+**/.vite/
+*.tsbuildinfo
+
+# Secrets et environnements : la cle OpenRouter est fournie au RUNTIME.
+.env
+.env.*
+**/.env
+**/.env.*
+.venv/
+**/.venv/
+
+# Poids du modele : l'image les retelecharge dans son etape dediee.
+apps/api/models/
+
+__pycache__/
+**/__pycache__/
+*.pyc
+
+.git/
+.gitlab-ci.yml
+tests/
+.claude/
+.DS_Store
+*.log

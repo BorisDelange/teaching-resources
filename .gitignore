@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+.vite/
+
+# Environment
+.env
+.env.local
+*.local
+
+# Python (apps/api)
+__pycache__/
+*.pyc
+.venv/
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Legacy static-site experiments
+tests/
+
+# Poids du modèle d'embedding (~118 Mo) : téléchargés par
+# apps/api/scripts/fetch_model.py, jamais versionnés.
+apps/api/models/
